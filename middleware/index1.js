@@ -10,10 +10,10 @@ const port = 3000;
 app.use(bodyParser.urlencoded({extended : true}));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(__dirname + "/public/index.html");   //Return the full path of the index.html file
 });
 
-app.post("/submit", (req, res) =>{
+app.post("/submit", (req, res) =>{     // take and print the data in console as key-value pair given by the html form.
     console.log(req.body);
 });
 
